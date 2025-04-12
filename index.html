@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Khadija Zouhair</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #e6f0ff);
+      color: #2c3e50;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      position: relative;
+      animation: headerAnimation 3s ease-in-out infinite;
+    }
+
+    /*@keyframes headerAnimation {
+      0% { background-color: #1e3a8a; }
+      50% { background-color: #4c6fbb; }
+      100% { background-color: #1e3a8a; }
+    }*/
+    header h1 {
+      font-size: 2.8em;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .contacts a {
+      color: #60a5fa;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .contacts a:hover {
+      color: #ff69b4;
+    }
+    .container {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 0 20px;
+      position: relative;
+    }
+    section {
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    section::before {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: #e0f2fe;
+      border-radius: 0 50% 50% 50%;
+      top: -20px;
+      right: -20px;
+      transform: rotate(45deg);
+    }
+    section h2 {
+      margin-bottom: 16px;
+      color: #0f172a;
+      border-bottom: 2px solid #cbd5e1;
+      padding-bottom: 6px;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0f172a;
+      color: white;
+      margin-top: 40px;
+    }
+
+    /* Formes géométriques animées */
+    .circle {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: rgba(99, 102, 241, 0.3);
+      top: 80vh;
+      left: -50px;
+      z-index: -1;
+      animation: moveCircle 5s infinite ease-in-out;
+    }
+    @keyframes moveCircle {
+      0% { top: 80vh; left: -50px; }
+      50% { top: 60vh; left: 10vw; }
+      100% { top: 80vh; left: -50px; }
+    }
+
+    .triangle {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 90px solid rgba(34, 197, 94, 0.3);
+      top: 50vh;
+      right: -40px;
+      z-index: -1;
+      animation: moveTriangle 4s infinite ease-in-out;
+    }
+    @keyframes moveTriangle {
+      0% { top: 50vh; right: -40px; }
+      50% { top: 40vh; right: 5vw; }
+      100% { top: 50vh; right: -40px; }
+    }
+
+    .square {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background-color: rgba(236, 72, 153, 0.3);
+      bottom: 10vh;
+      right: 40px;
+      z-index: -1;
+      animation: moveSquare 6s infinite ease-in-out;
+    }
+    @keyframes moveSquare {
+      0% { bottom: 10vh; right: 40px; }
+      50% { bottom: 20vh; right: 10vw; }
+      100% { bottom: 10vh; right: 40px; }
+    }
+
+    .hexagon {
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      background-color: rgba(251, 146, 60, 0.3);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      top: 70vh;
+      left: 10px;
+      z-index: -1;
+      animation: moveHexagon 7s infinite ease-in-out;
+    }
+    @keyframes moveHexagon {
+      0% { top: 70vh; left: 10px; }
+      50% { top: 60vh; left: 50vw; }
+      100% { top: 70vh; left: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle"></div>
+  <div class="triangle"></div>
+  <div class="square"></div>
+  <div class="hexagon"></div>
+
+  <header>
+    <h1>Khadija Zouhair</h1>
+    <p>Étudiante en Informatique & Ingénierie des Données</p>
+    <div class="contacts">
+      <a href="mailto:zouhairkhadija51@gmail.com">Email</a>
+      <a href="tel:+212629139309">Téléphone</a>
+      <a href="https://www.linkedin.com/in/khadija-zouhair-486510293" target="_blank">LinkedIn</a>
+      <a href="https://github.com/khzouhair" target="_blank">GitHub</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>À propos</h2>
+      <p>Passionnée par l'analyse de données, l’IA et le développement d’outils analytiques. Étudiante à l’ENSA Khouribga & 1337, motivée par les défis et la résolution de problèmes réels.</p>
+    </section>
+
+    <section>
+      <h2>Éducation</h2>
+      <ul>
+        <li>2024–2025 : Cycle Ingénieur – ENSA Khouribga & 1337</li>
+        <li>2022–2024 : Cycle Préparatoire – ENSA Khouribga</li>
+        <li>2021–2022 : Bac Sciences Physiques – Mention Très Bien</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Compétences</h2>
+      <ul>
+        <li><strong>Langages :</strong> Python, C, Java, Matlab</li>
+        <li><strong>Web :</strong> HTML, CSS, JS, Bootstrap, Tailwind, PHP</li>
+        <li><strong>Bases de données :</strong> SQL Server, MySQL, MongoDB, Oracle</li>
+        <li><strong>BI :</strong> Power BI, Qlik Sense</li>
+        <li><strong>IA / Vision :</strong> TensorFlow, Keras, OpenCV, MediaPipe</li>
+        <li><strong>Systèmes :</strong> Windows, Linux, MacOS</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projets</h2>
+      <ul>
+        <li><strong>Tableau de Bord de Ventes</strong> – Python & Qlik Sense</li>
+        <li><strong>Gestion de Pâtisserie</strong> – C</li>
+        <li><strong>Traitement d’Images</strong> – Python</li>
+        <li><strong>Commande Industrielle</strong> – Java, Swing, SQL</li>
+        <li><strong>Site Web de Services Informatiques</strong></li>
+        <li><strong>Reconnaissance d’Actions Humaines</strong> – OpenCV, MediaPipe, Deep Learning</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Activités & Langues</h2>
+      <ul>
+        <li><strong>Clubs :</strong> MI ENSA, DataVerse ENSA, JLM ENSA</li>
+        <li><strong>Langues :</strong> Français, Anglais, Arabe</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Khadija Zouhair. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
